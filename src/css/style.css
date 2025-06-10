@@ -1,28 +1,28 @@
 /* In this part, I put the diferents fonds types */
 @font-face {
     font-family: 'InterTight-Regular';
-    src: url('assets/fonts/Quicksand-Regular.ttf') format('truetype');
+    src: url('../../assets/fonts/Quicksand-Regular.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Quicksand-Regular';
-    src: url('../assets/fonts/Quicksand-Regular.ttf') format('truetype');
+    src: url('../../assets/fonts/Quicksand-Regular.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Quicksand-Medium';
-    src: url('assets/fonts/Quicksand-Medium.ttf') format('truetype');
+    src: url('../../assets/fonts/Quicksand-Medium.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Quicksand-SemiBold';
-    src: url('../assets/fonts/Quicksand-SemiBold.ttf') format('truetype');
+    src: url('../../assets/fonts/Quicksand-SemiBold.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }

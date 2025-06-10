@@ -59,7 +59,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    background-image: url("/assets/images/projects/sign_up.png");
+    background-image: url("../../assets/images/projects/sign_up.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
@@ -261,7 +261,7 @@
     display: flex;
     }
     .img_sign {
-        background-image: url("/assets/images/projects/sign_up.png");
+        background-image: url("../../assets/images/projects/sign_up.png");
         background-size: 100% auto; 
         background-repeat: no-repeat;
         background-position: center top;
@@ -359,7 +359,7 @@
     }
 
     .img_sign {
-        background-image: url("/assets/images/projects/sign_large.png");
+        background-image: url("../../assets/images/projects/sign_large.png");
         background-size: 100% auto; 
         background-repeat: no-repeat;
         background-position: center top;
