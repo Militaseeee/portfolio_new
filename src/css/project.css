@@ -1,0 +1,427 @@
+#design_lab {
+    padding: 50px;
+    text-align: center;
+}
+#design_lab h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--Mouse-grey);
+    font-family: 'Quicksand-Medium';
+}
+.card_design {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    /* padding: 2rem; */
+    box-sizing: border-box;
+    background-color: white;
+}
+.card_new_design {
+    display: flex;
+    border-radius: 15px;
+    padding: 30px;
+    flex: 300px;
+    height: 500px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.figma_design {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Creates two rows: first adjusts to content height, second takes remaining space */
+    grid-template-columns: 3fr 5fr; /* Two columns: first takes 3 part, second takes 5 parts of available width */
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-items: center;
+}
+.img_login {
+    grid-column: 1 / 3; /* occupies in all row */
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_login img {
+    max-width: 100%;
+    object-fit: contain; /* Keeps the aspect ratio while scaling to fit */
+    border-radius: 5px;
+}
+.img_sign {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex; /* Enables flexbox for alignment */
+    justify-content: flex-start;
+    align-items: center;
+
+    background-image: url("/assets/images/projects/sign_up.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 100%;
+    height: 226px;
+    max-height: 100%;
+    /* object-fit: contain; */
+    border-radius: 5px;
+}
+/* .img_sign img {
+    max-height: 226px;
+    object-fit: contain;
+    border-radius: 5px;
+} */
+.text_button_group {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 20px;
+    background-color: #605D5D;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+}
+.text_button_group h3 {
+    display: flex;
+    color: white;
+}
+.text_button_group p {
+    font-size: 18px;
+    color: black;
+    text-align: justify;
+}
+.button_dl {
+    padding: 8px 18px;
+    background-color: #000000; 
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.8s ease;
+    font-size: 18px;
+    font-weight: bold;
+}
+.button_dl:hover {
+    background-color: #5bbfa7;
+}
+.button_dl::after {
+    content: " ➤";
+    font-size: 1rem;
+    transition: transform 0.3s;
+    display: inline-block;
+    margin-left: 8px;
+}
+.button_dl:hover::after {
+    transform: translateX(6px);
+}
+/* Start second card about grid */
+.grid_design {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.items {
+    height: 103px;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+}
+.first {
+    background-color: #ff4944;
+    grid-column: 1 / 5;
+}
+.second {
+    background-color: #ff4944;
+    grid-column: 5 / 8;
+}
+.third {
+    background-color: #ffa930;
+    grid-column: 1 / 4;
+    grid-row: span 2;
+    height: 215px;
+}
+.fourth {
+    background-color: #9c0579;
+    grid-column: 4 / 8;
+}
+.fifth {
+    background-color: #9c0579;
+    grid-column: 4 / 8;
+}
+.sixth {
+    background-color: #01748f;
+    grid-column: 1 / 3;
+}
+.seventh {
+    background-color: #01748f;
+    grid-column: 3 / 6;
+}
+.eighth {
+    background-color: #01748f;
+    grid-column: 6 / 8;
+}
+
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.87rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    text-align: justify;
+    margin-top: 2.5rem;
+    padding: 20px;
+}
+.project-img img {
+    width: 25rem;
+    height: auto;
+    border-radius: 0.6rem;
+}
+.project-text {
+    max-width: 31.2rem;
+}
+.project-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+    color: var(--Grey);
+}
+.project-text p {
+    font-size: 1rem;
+    color: var(--Light-black);
+    line-height: 1.5;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+}
+.button-project {
+    display: inline-flex;       
+    padding: 0.5rem 1.2rem;
+    background-color: var(--Blue-green); 
+    color: var(--White);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+}
+.button-project:hover {
+    background-color: var(--Dark-blue-green); 
+}   
+.button-project::after {
+    content: " ➤";
+    font-size: 1rem;
+    transition: transform 0.3s;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+.button-project:hover::after {
+    transform: translateX(6px);
+}
+
+
+
+@media (max-width: 768px) {
+    #design_lab {
+        padding: 50px;
+        text-align: center;
+    }
+    #design_lab h2 {
+        font-size: 2rem;
+    }
+    .card_design {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card_new_design {
+        flex: 1 1 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .figma_design {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+    box-sizing: border-box;
+    }
+    .img_login {
+        justify-content: center;
+    display: flex;
+    }
+    .img_sign {
+        background-image: url("/assets/images/projects/sign_up.png");
+        background-size: 100% auto; 
+        background-repeat: no-repeat;
+        background-position: center top;
+        width: 100%;
+        
+    }
+    .text_button_group {
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+    .text_button_group p {
+        font-size: 16px;
+    }
+
+    /* Start second card about grid */
+    .grid_design {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+    .items {
+        height: 90px;
+    }
+    .third {
+        height: auto;
+    }
+
+    .project-img {
+        justify-content: center;
+        display: flex;
+    }
+
+    .project-img img {
+        width: 90%;
+        max-width: 260px;
+        height: auto;
+        border-radius: 0.6rem;
+    }
+    .project-text {
+        max-width: 100%;
+    }
+    .project-text h3 {
+        font-size: 1.2rem;
+        justify-content: center;
+        display: flex;
+    }
+    .project-text p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        text-align: justify;
+    }
+    .button-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1197px) {
+    #design_lab {
+        padding: 40px 20px;
+    }
+
+    .card_design {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .card_new_design {
+        flex: 1 1 100%;
+        height: auto;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .figma_design {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img_login {
+        width: 100%;
+    justify-content: center;
+    }
+
+    .img_login img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .img_sign {
+        background-image: url("/assets/images/projects/sign_large.png");
+        background-size: 100% auto; 
+        background-repeat: no-repeat;
+        background-position: center top;
+        width: 100%;
+        height: auto;
+        padding-top: 40%;
+        border-radius: 5px;
+    }
+
+    .text_button_group {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .text_button_group p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .grid_design {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .first {
+        grid-column: 1 / 5; 
+    }
+
+    .second {
+        grid-column: 5 / 8;
+    }
+
+    .third {
+    grid-column: 1 / 4;
+    grid-row: span 2;
+    /* height: 215px; */
+    }
+
+    .fourth {
+        grid-column: 4 / 8; 
+    }
+
+    .fifth {
+        grid-column: 4 / 8;
+    }
+
+    .sixth {
+        grid-column: 1 / 3;
+    }
+
+    .seventh {
+        grid-column: 3 / 6;
+    }
+
+    .eighth {
+        grid-column: 6 / 8;
+    }
+
+    .project-text h3 {
+        justify-content: center;
+        display: flex;
+    }
+    
+}

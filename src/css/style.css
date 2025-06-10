@@ -1,0 +1,438 @@
+/* In this part, I put the diferents fonds types */
+@font-face {
+    font-family: 'InterTight-Regular';
+    src: url('../assets/fonts/Quicksand-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url('../assets/fonts/Quicksand-Regular.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand-Medium';
+    src: url('../assets/fonts/Quicksand-Medium.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand-SemiBold';
+    src: url('../assets/fonts/Quicksand-SemiBold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* These are the different types of codes where my portfolio applies */
+:root {
+    /* background */
+    --Blue: rgb(46, 80, 119); /* #2E5077 */
+    --Blue-green: rgb(121, 215, 190); /* #79D7BE */
+    --Bone-white: rgb(242, 242, 242); /* #F2F2F2 */
+    --Light-coral: rgb(255, 182, 185); /* #FFB6B9 */
+
+    /* Color letter */
+    --Black: rgb(0, 0, 0);
+    --White: rgb(255, 255, 255);
+    --Grey: rgb(75, 75, 75);
+    --Mouse-grey: rgb(51, 51, 51);
+    --Light-black: rgb(34, 34, 34);
+
+    /* Shadow */
+    --Shadow-blue: 0 4px 8px rgba(46, 80, 119, 0.4);
+}
+
+/* Applies styles to all HTML elements on the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Calculates the total size (width and height) of an HTML element */
+}
+
+/* When the person clicks it, it takes them to the link */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Quicksand-Regular';
+}
+
+/* Style del header y navbar */
+header {
+    background-color: var(--Blue);
+    box-shadow: var(--Shadow-blue);
+    /* So that it remains fixed */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* This value controls the overlap of layers */
+}
+
+/* Navigation bar */
+.navigator-bar {
+    display: flex;
+    justify-content: space-around; /* Space between title and navbar */
+    align-items: center;
+    padding: 1.56rem 2.5rem;
+    font-family: 'Quicksand-Medium';
+    color: var(--White);
+    flex-wrap: wrap;
+}
+
+.title-navbar {
+    font-size: 1.5rem; /* rem Adapts to the size configured by the user in the browser */
+    font-family: 'InterTight-Regular';
+}
+
+/* Links of navegation */
+.list-navbar {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    /* In this part, start "navbar responsive" */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 0;
+    margin: 0;
+}
+
+.list-navbar li a {
+    color: var(--White);
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block; /* Allows the element to transform and have width/height */
+    transition: transform 0.2s ease; /* Makes the transform change smooth in 0.2 seconds */
+}
+
+.list-navbar li a:hover {
+    transform: translateY(-4px); /* Rises 4px */
+    color: var(--Blue-green);
+}
+
+/* Style principal content */
+main {
+    margin-top: 7.5rem;
+}
+
+.container {
+    max-width: 71.8rem;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+} 
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: left;
+    max-width:  68.7rem; /* It doesn't take up the whole screen */
+    min-width: 18.7rem;
+    margin: 0 auto; /* Focus all of this on large screens */
+    padding: 0 2.5rem;
+}
+
+#home {
+    background-color: var(--Blue);
+    color: var(--White);
+}
+#about {
+    background-color: var(--Blue-green);
+    color: var(--Mouse-grey);
+}
+/* #projects {
+    background-color: var(--Bone-white);
+    color: var(--Light-black);
+} */
+#contact {
+    background-color: var(--Light-coral);
+    color: var(--Light-black);
+}
+
+/* First section home */
+.home-slide {
+    display: flex;             
+    align-items: center;        
+    justify-content: space-evenly; 
+    gap: 3.7rem;                  
+    padding: 3.1rem;
+    flex-wrap: wrap;
+}
+
+.img-happy {
+    width: 21.8rem;
+    height: 21.8rem;
+    display: block; 
+    border-radius: 0.6rem;
+    transition: transform 0.3s ease;
+}
+
+.img-happy:hover {
+    transform: scale(1.05);
+}
+
+.home-text {
+    font-family: 'Quicksand-Medium';
+    max-width: 31.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    height: 21.8rem;   
+
+}
+
+.text-efect-wave span {
+    animation: 2s wave infinite;
+    color: var(--White) !important;
+    display: inline-block;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes wave {
+    0%, 40%, 100% {
+    transform: translateY(0px);
+    }
+    20% {
+    transform: translateY(-15px);
+    }
+}
+
+.text-efect-wave .text-second {
+    animation: none;
+    color: var(--Blue-green) !important;
+    position: relative;
+    font-size: inherit; 
+}
+
+.home-text p {
+    margin-top: 1.8rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+
+/* Second section about me */
+.about-slide {
+    display: flex;             
+    align-items: center;        
+    justify-content: space-evenly; 
+    gap: 3.7rem;                  
+    padding: 3.1rem;
+    flex-wrap: wrap;
+}
+.img-me {
+    width: 21.8rem;
+    height: 25rem;
+    display: block; 
+    border-radius: 0.6rem;
+}
+.about-text {
+    max-width: 31.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 25rem;   
+    justify-content: center;
+}
+.about-text h2 {
+    font-family: 'Quicksand-Medium';
+    margin: 0;
+    font-size: 2.5rem; 
+    word-break: break-word; 
+    line-height: 1.2;
+    justify-content: center;
+}
+.about-text p {
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+.about-text span {
+    color: var(--Mouse-grey);
+    position: relative;
+    font-size: inherit; /* Take the size of the h2 to avoid mismatches */
+    word-break: break-word;
+    font-weight: bold;
+}
+.button-about {
+    display: inline-flex;  
+    margin-top: 1.2rem;
+    padding: 0.5rem 1.2rem;
+    background-color: #4B4B4B;
+    color: var(--White);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.button-about:hover {
+    background-color: var(--Mouse-grey);
+}
+.button-about::after {
+    content: " ➤";
+    font-size: 1rem;
+    transition: transform 0.3s;
+    margin-left: 0.5rem;
+}
+.button-about:hover::after {
+    transform: translateX(6px);
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--Blue); 
+    box-shadow: var(--Shadow-blue);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 1.2rem;
+    color: var(--White);
+    font-family: 'Quicksand-Medium';
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 2.5rem;
+    box-sizing: border-box;
+    word-break: break-word; 
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+    /* Navigation bar */
+    .navigator-bar{
+        flex-direction: column;
+        padding: 1.2rem;
+        flex-wrap: wrap;
+    }
+    .list-navbar {
+        flex-direction: row; /* Changes to column layout for small screens */
+        gap: 0.6rem;
+        justify-content: center;
+        margin-top: 0.6rem;
+        flex-wrap: wrap;
+    }
+    .list-navbar li a {
+        font-size: 1.2rem; /* Slightly larger text for mobile */
+    }
+    .container {
+        padding: 0 1.2rem;
+        font-size: 1.2rem;
+        align-items: center;
+        text-align: center;
+        margin: 0rem 0.6rem;
+    } 
+    #home {
+        margin-top: 8.7rem;
+    }
+    /* First section home */
+    .home-slide {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.2rem;
+        gap: 1.5rem;
+    }
+    .home-text h2 {
+        font-size: 1.5rem;
+    }
+    .home-text p {
+        font-size: 1rem;
+        /* padding: 0 10px; */
+    }
+    .img-happy {
+        width: 80%;
+        max-width: 15.6rem;
+        height: auto;
+        margin-bottom: 1.2rem;
+    }
+    /* Second section about me */
+    .about-slide {
+        padding: 1.2rem;
+        gap: 1.5rem;
+    }
+    .img-me {
+        width: 80%;
+        max-width: 15.6rem;
+        height: auto;
+    }
+    .about-text h2 {
+        font-size: 1.5rem;
+    }
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1197px) {
+    /* Navigation bar */
+    .container{
+        margin: 0 0.6rem;
+    }
+    /* First section home */
+    .home-slide {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.2rem;
+        gap: 1.5rem;
+    }
+    .home-text {
+        max-width: 100%;
+        /* padding: 0 10px; */
+        text-align: center;
+        height: auto;
+        margin: 0;
+    }
+    .home-text h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .home-text p {
+        font-size: 1.1rem;
+        /* padding: 0 10px; */
+        text-align: justify;
+    }
+    .img-happy {
+        width: 70%;
+        max-width: 17.5rem;
+        height: auto;
+        margin-bottom: 0.6rem;
+    }
+    /* Second section about me */
+    .about-slide {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.87rem 1.2rem;
+        gap: 1.87rem;
+    }
+    .img-me {
+        order: 0;
+        width: 70%;
+        max-width: 18.7rem;
+        height: auto;
+        border-radius: 0.6rem;
+    }
+    .about-text {
+        order: 1;
+        max-width: 100%;
+        align-items: center; /* texto centrado */
+        height: auto;
+        text-align: center;
+    }
+    .about-text h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .about-text p {
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+}
