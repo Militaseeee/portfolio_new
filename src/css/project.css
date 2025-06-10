@@ -191,6 +191,7 @@
     max-width: 31.2rem;
 }
 .project-text h3 {
+    font-family: 'Quicksand-Medium';
     display: flex;
     justify-content: center;
     font-size: 1.8rem;
