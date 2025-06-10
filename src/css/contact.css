@@ -97,6 +97,11 @@
     outline: none;
     border-color: #333333;
 }
+.button_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 .button_contact {
     display: inline-flex;       
     padding: 8px 20px;
